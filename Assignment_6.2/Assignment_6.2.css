@@ -1,0 +1,43 @@
+*{
+    margin: 0.2rem;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    position: relative;
+    top: 25%;
+    color: aliceblue;
+}
+.block{
+    
+    background-color: grey;
+    height: 13vh;
+    
+}
+.block2{
+    background-color: grey;
+    position:absolute ;
+    height:40vh ;
+    width:49vw ;
+}
+.block3{
+    float: right;
+    /* background-color: blue; */
+}
+.block3 .block4{
+    background-color: grey;
+    height:19vh ;
+    width:49vw ;
+    
+    
+    
+}
+.block3 .block5{
+    background-color: grey;
+    height:19vh ;
+    width:49vw ;
+    
+    
+    
+}
