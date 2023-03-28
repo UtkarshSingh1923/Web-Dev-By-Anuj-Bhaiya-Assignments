@@ -16,28 +16,33 @@ h1{
     
 }
 .block2{
-    background-color: grey;
-    position:absolute ;
-    height:40vh ;
-    width:49vw ;
-}
-.block3{
-    float: right;
-    /* background-color: blue; */
-}
-.block3 .block4{
-    background-color: grey;
-    height:19vh ;
-    width:49vw ;
     
     
+    height: 40vh;
     
 }
-.block3 .block5{
-    background-color: grey;
-    height:19vh ;
-    width:49vw ;
+.block21{
+    float:left ;
+    display:inline-block ;
+    width:49% ;
+    height:38vh ;
+    background-color:grey;
+}
+.block22{
+    float:right ;
+    width:49%;
+    height:38vh ;
+    display:inline-block ;
     
     
+
+}
+.block221,.block222{
+    height:50%;
+    width:99%;
+    top: 0;
+    background-color:grey;
     
 }
+
+
