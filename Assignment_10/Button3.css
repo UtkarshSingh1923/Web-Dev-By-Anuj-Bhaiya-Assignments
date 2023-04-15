@@ -42,12 +42,13 @@
     position: absolute;
     z-index:2 ;
     background-color: black;
-    transition: 0.5s cubic-bezier(0.33, -1.23, 0.66, 1.79);
-    height:0%;
-    width:80% ;
+    transition: 0.7s cubic-bezier(0.33, -1.23, 0.66, 1.79);
+    height:3%;
+    width:0% ;
     bottom:10% ;
     left:10% ;
 }
 .button:hover::after{
-    height:3% ;
+    /* height:3% ; */
+    width:80% ;
    }
