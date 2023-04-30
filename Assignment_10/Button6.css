@@ -23,6 +23,7 @@
     z-index: 1;
     overflow: hidden;
     filter: blur(1px);
+    border-radius:4px ;
 }
 .button::before{
     z-index: -1;
