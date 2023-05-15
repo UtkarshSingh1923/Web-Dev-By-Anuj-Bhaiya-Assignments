@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    margin:0 ;
+    padding:0 ;
+    font-family: 'Open Sans', sans-serif;
+}
+:root{
+    --colorbackground:rgba(0, 214, 170, .85) ;
+}
+body{
+    height:300vh ;
+}
+h1{
+    text-align: center;
+    padding:1rem ;
+}
+header{
+    background-color:var(--colorbackground) ;
+    width:100% ;
+    position: fixed;
+}
+.toggle-navbar{
+    position: absolute;
+    top:0 ;
+    left:0 ;
+    margin-left:1em ;
+    display:none ;
+    /* top:-99999px;
+    left:-9999px ; */
+    
+}
+.toggle-hamburger{
+    position:absolute ;
+    top:0 ;
+    left:0 ;
+    margin-left:1em ;
+    display:flex ;
+    height:100% ;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+.toggle-hamburger span,
+.toggle-hamburger span::before,
+.toggle-hamburger span::after{
+    height:2px ;
+    width:1.5rem ;
+    background-color: aliceblue;
+    position: relative;
+}
+.toggle-hamburger span::before{
+    content: '';
+    position: absolute;
+    top:7px ;
+    
+}
+.toggle-hamburger span::after{
+    content: '';
+    position: absolute;
+    bottom:7px ;
+    
+}
+.toggle-navbar:checked ~ nav{
+    /* display: block; */
+    transform: scale(1,1);
+    animation-duration: 0.5s;
+}
+.toggle-navbar:checked ~ .toggle-hamburger{
+  animation-name: rotate;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 2;
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(-30deg);
+    }
+    25%{
+        transform: rotate(-20deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(30deg);
+    }
+    
+}
+
+.toggle-navbar:checked ~ nav li a{
+    /* display: block; */
+    opacity: 1;
+    transition: 0.25s ease-in-out 0.25s;
+}
+nav{
+    left:0 ;
+    position: absolute;
+    background-color: var(--colorbackground);
+    /* display:none ; */
+    width:100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: 0.25s ease-in-out;
+
+}
+nav ul{
+    list-style:none ;
+}
+nav li{
+    margin-bottom: 1em ;
+    margin-left: 1em ;
+}
+nav li a{
+    text-transform: uppercase;
+    text-decoration: none ;
+    font-size:1.2rem ;
+    color:aliceblue;
+    opacity: 0;
+    transition: 0.15s ease-in-out ;
+}
+@media only screen and (min-width:600px){
+    .toggle-hamburger , .toggle-hamburger::before , .toggle-hamburger::after{
+        display: none;
+    }
+    nav{
+        all: unset;
+        transform: scale(1,1);
+        width:80% ;
+        position: static;
+        background-color: transparent;
+        
+    }
+    header{
+        display: flex ;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    h1{
+        width:10% ;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        /* position: relative; */
+    }
+    nav a::before{
+        content: '';
+        background-color: black;
+        position: absolute;
+        display: block;
+        height:5px ;
+        left:0 ;
+        right:0 ;
+        top:-1.25em ;
+        transform: scale(0,1);
+        transition: 200ms ease-in-out;
+        transform-origin: left;
+        
+    }
+    nav a:hover::before{
+       transform: scale(1,1);
+    }
+    nav ul li{
+        margin: 0;
+        
+        display: inline-block;
+        height:100% ;
+    }
+    nav li a{
+        opacity:1 ;
+        position: relative;
+    }
+}
