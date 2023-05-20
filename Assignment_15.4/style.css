@@ -1,0 +1,93 @@
+*{
+    box-sizing: border-box;
+    margin:0 ;
+    padding:0 ;
+}
+.container{
+    height:50vh ;
+    width:100% ;
+    position: relative;
+}
+img{
+    position: absolute;
+    height:100% ;
+    width:100% ;
+}
+.container2{
+    height:2rem ;
+    width:10rem ;
+    /* background-color: aquamarine; */
+    margin: 1em;
+    position: absolute;
+    left:43% ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0.7;
+}
+.circle{
+    height:1rem ;
+    width:1rem;
+    border-radius: 50%;
+    background-color: gray ;
+}
+#circle-1{
+    background-color: rgb(226, 87, 22);
+}
+#circle-2{
+    background-color: rgb(89, 116, 235);
+}
+#circle-3{
+    background-color: rgb(4, 0, 248);
+}
+#circle-4{
+    background-color: rgb(0, 0, 0);
+}
+.image-1{
+ z-index: 1;
+}
+.image-2{
+  z-index: 1 ;
+}
+.image-3{
+  z-index: 1;
+}
+.image-4{
+ z-index: 1;
+}
+.button{
+    height:20% ;
+    /* background-color: azure; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100% ;
+}
+.change{
+    height:100% ;
+    width:30px ;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 7;
+    color: black;
+    /* background-color: black; */
+}
+
+.left{
+    left: 0.8rem ;
+}
+.right{
+    right: 0.8rem;
+}
+.button:hover{
+    background-color: gray;
+    opacity: 0.5;
+}
+.button:hover .fa-sharp{
+    transform: scale(1.5);
+    
+}
